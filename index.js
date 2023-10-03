@@ -23,6 +23,9 @@ var Shopify = new shopifyAPI({
 
 app.get("/", (req, res) => {
   res.send({ msg: "Welcome to Homepage" });
+  axios.get("https://api.neoscan.io/api/main_net/v1/get_all_nodes")
+    .then(data => res.json(data))
+    .catch(err => next(err));
 });
 
 // HMAC verification function
@@ -37,6 +40,7 @@ app.post("/webhooks/order-creation", async (req, res, next) => {
   const data = req.body.toString();
   const payload = JSON.parse(data);
   try {
+    console.log(process.env.BASE_URL2);
     axios.post(process.env.BASE_URL, payload)
 		.then(response => {
 			console.log(response.data);
@@ -51,7 +55,7 @@ app.post("/webhooks/order-creation", async (req, res, next) => {
     const shopifyHmac = req.headers['x-shopify-hmac-sha256'];
     if (verifyHmac(req.body, shopifyHmac)) {
       // console.log(payload);
-      console.log(payload.line_items)
+      // console.log(payload.line_items)
       res.sendStatus(200); // Respond with a 200 status code
     } else {
       res.sendStatus(403); // Return a 403 Forbidden status if HMAC is not valid
