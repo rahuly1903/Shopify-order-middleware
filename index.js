@@ -81,10 +81,10 @@ app.post("/webhooks/order-creation", async (req, res, next) => {
     axios
       .request(config)
       .then((response) => {
-        console.log(" sendStatus 200");
+        console.log(response.data, " sendStatus 200");
       })
       .catch((error) => {
-        console.log("sendStatus 200");
+        console.log(error, "sendStatus 500");
       });
   } catch (error) {
     console.error(error);
