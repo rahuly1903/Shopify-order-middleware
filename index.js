@@ -67,16 +67,24 @@ app.post("/webhooks/test", (req, res, next) => {
 
 app.post("/webhooks/order-creation", async (req, res, next) => {
   const data = req.body.toString();
-  const payload = JSON.parse(data);
   try {
-    console.log(process.env.BASE_URL);
+    let config = {
+      method: "post",
+      maxBodyLength: Infinity,
+      url: process.env.BASE_URL,
+      headers: {
+        "Content-Type": "application/json",
+      },
+      data: data,
+    };
+
     axios
-      .post(process.env.BASE_URL, req.body)
+      .request(config)
       .then((response) => {
-        console.log(response.data);
+        console.log(" sendStatus 200");
       })
-      .catch((err) => {
-        console.log({ message: err.message });
+      .catch((error) => {
+        console.log("sendStatus 200");
       });
   } catch (error) {
     console.error(error);
