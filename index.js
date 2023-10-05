@@ -11,7 +11,7 @@ const port = process.env.PORT || 4000;
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ limit: "50mb", extended: true }));
 // parse application/json
-app.use(bodyParser.raw({ limit: "50mb",type: "application/json" }));
+app.use(bodyParser.raw({ limit: "50mb", type: "application/json" }));
 
 app.use(cors());
 
@@ -23,36 +23,66 @@ var Shopify = new shopifyAPI({
 
 app.get("/", (req, res) => {
   res.send({ msg: "Welcome to Homepage" });
-  axios.get("https://api.neoscan.io/api/main_net/v1/get_all_nodes")
-    .then(data => res.json(data))
-    .catch(err => next(err));
+  axios
+    .get("https://api.neoscan.io/api/main_net/v1/get_all_nodes")
+    .then((data) => res.json(data))
+    .catch((err) => next(err));
 });
 
 // HMAC verification function
 function verifyHmac(requestBody, shopifyHmac) {
   const payload = requestBody.toString();
-  const hash = crypto.createHmac('sha256', process.env.WEBHOOK_API_KEY).update(payload).digest('base64');
-  console.log(hash,shopifyHmac);
+  const hash = crypto
+    .createHmac("sha256", process.env.WEBHOOK_API_KEY)
+    .update(payload)
+    .digest("base64");
+  console.log(hash, shopifyHmac);
   return hash === shopifyHmac;
 }
+
+app.post("/webhooks/test", (req, res, next) => {
+  let data = JSON.stringify({
+    data: 1,
+  });
+
+  let config = {
+    method: "post",
+    maxBodyLength: Infinity,
+    url: "https://vportalwithclarity.com/cyclictestsh",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    data: data,
+  };
+
+  axios
+    .request(config)
+    .then((response) => {
+      console.log(JSON.stringify(response.data));
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+});
 
 app.post("/webhooks/order-creation", async (req, res, next) => {
   const data = req.body.toString();
   const payload = JSON.parse(data);
   try {
-    console.log(process.env.BASE_URL2);
-    axios.post(process.env.BASE_URL, payload)
-		.then(response => {
-			console.log(response.data);
-		})
-		.catch((err) => {
-			console.log({ message: err.message });
-		});
+    console.log(process.env.BASE_URL);
+    axios
+      .post(process.env.BASE_URL, req.body)
+      .then((response) => {
+        console.log(response.data);
+      })
+      .catch((err) => {
+        console.log({ message: err.message });
+      });
   } catch (error) {
     console.error(error);
   }
   try {
-    const shopifyHmac = req.headers['x-shopify-hmac-sha256'];
+    const shopifyHmac = req.headers["x-shopify-hmac-sha256"];
     if (verifyHmac(req.body, shopifyHmac)) {
       // console.log(payload);
       // console.log(payload.line_items)
@@ -84,4 +114,3 @@ app.post("/api/create-product", async (req, res) => {
 app.listen(port, () => {
   console.log(`Server running on port ${port}`);
 });
-
