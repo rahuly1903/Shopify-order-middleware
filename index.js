@@ -68,33 +68,32 @@ app.post("/webhooks/test", (req, res, next) => {
 app.post("/webhooks/order-creation", async (req, res, next) => {
   const data = req.body.toString();
   try {
-    let config = {
-      method: "post",
-      maxBodyLength: Infinity,
-      url: process.env.BASE_URL,
-      headers: {
-        "Content-Type": "application/json",
-      },
-      data: data,
-    };
-
-    axios
-      .request(config)
-      .then((response) => {
-        console.log(response.data, " sendStatus 200");
-      })
-      .catch((error) => {
-        console.log(error, "sendStatus 500");
-      });
-  } catch (error) {
-    console.error(error);
-  }
-  try {
     const shopifyHmac = req.headers["x-shopify-hmac-sha256"];
     if (verifyHmac(req.body, shopifyHmac)) {
-      // console.log(payload);
-      // console.log(payload.line_items)
       res.sendStatus(200); // Respond with a 200 status code
+      let config = {
+        method: "post",
+        maxBodyLength: Infinity,
+        url: process.env.BASE_URL,
+        headers: {
+          "Content-Type": "application/json",
+        },
+        data: data,
+      };
+
+      console.log(config.url);
+
+      axios
+        .request(config)
+        .then((response) => {
+          console.log(response.data, " sendStatus 200");
+        })
+        .catch((err) => {
+          console.log(err.response.status);
+          console.log(err.message);
+          console.log(err.response.headers); // 👉️ {... response headers here}
+          console.log(err.response.data); // 👉️ {... response data here}
+        });
     } else {
       res.sendStatus(403); // Return a 403 Forbidden status if HMAC is not valid
     }
