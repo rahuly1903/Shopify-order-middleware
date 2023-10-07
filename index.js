@@ -68,33 +68,32 @@ https: app.post("/webhooks/test", (req, res, next) => {
 
 app.post("/webhooks/order-creation", async (req, res, next) => {
   const data = req.body.toString();
+  let config = {
+    method: "post",
+    maxBodyLength: Infinity,
+    url: process.env.BASE_URL,
+    headers: {
+      "Content-Type": "application/json",
+    },
+    data: data,
+  };
+
+  console.log(config.url);
+  try {
+    const responce = await axios.request(config);
+    console.log(responce.status);
+  } catch (err) {
+    console.log(err);
+  }
+
   try {
     const shopifyHmac = req.headers["x-shopify-hmac-sha256"];
     if (verifyHmac(req.body, shopifyHmac)) {
       res.sendStatus(200); // Respond with a 200 status code
-      let config = {
-        method: "post",
-        maxBodyLength: Infinity,
-        url: process.env.BASE_URL,
-        headers: {
-          "Content-Type": "application/json",
-        },
-        data: data,
-      };
-
-      console.log(config.url);
-
-      axios
-        .request(config)
-        .then((response) => {
-          console.log(response.data, " sendStatus 200");
-        })
-        .catch((err) => {
-          console.log(err.response);
-        });
     } else {
       res.sendStatus(403); // Return a 403 Forbidden status if HMAC is not valid
     }
+    //test
   } catch (error) {
     console.error(error);
     res.sendStatus(500); // Return a 500 Internal Server Error for any unexpected errors
