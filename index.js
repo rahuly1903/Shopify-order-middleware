@@ -40,7 +40,8 @@ function verifyHmac(requestBody, shopifyHmac) {
   return hash === shopifyHmac;
 }
 
-app.post("/webhooks/test", (req, res, next) => {
+// vportalwithclarity.com/cyclictestsh
+https: app.post("/webhooks/test", (req, res, next) => {
   let data = JSON.stringify({
     data: 1,
   });
@@ -89,10 +90,7 @@ app.post("/webhooks/order-creation", async (req, res, next) => {
           console.log(response.data, " sendStatus 200");
         })
         .catch((err) => {
-          console.log(err.response.status);
-          console.log(err.message);
-          console.log(err.response.headers); // 👉️ {... response headers here}
-          console.log(err.response.data); // 👉️ {... response data here}
+          console.log(err.response);
         });
     } else {
       res.sendStatus(403); // Return a 403 Forbidden status if HMAC is not valid
