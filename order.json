@@ -1,0 +1,971 @@
+{
+  "order": {
+    "id": 5205072248999,
+    "admin_graphql_api_id": "gid://shopify/Order/5205072248999",
+    "app_id": 580111,
+    "browser_ip": "103.179.46.178",
+    "buyer_accepts_marketing": true,
+    "cancel_reason": null,
+    "cancelled_at": null,
+    "cart_token": "c1-89c1cee8d1ce1e2d8c5bcb81ba38a2a9",
+    "checkout_id": 29022081908903,
+    "checkout_token": "6b21d12429bf08445c2d7774951cad03",
+    "client_details": {
+      "accept_language": "en-US",
+      "browser_height": null,
+      "browser_ip": "103.179.46.178",
+      "browser_width": null,
+      "session_hash": null,
+      "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36"
+    },
+    "closed_at": null,
+    "company": null,
+    "confirmed": true,
+    "contact_email": "rahuly1903@gmail.com",
+    "created_at": "2023-10-25T08:09:22-04:00",
+    "currency": "USD",
+    "current_subtotal_price": "6490.00",
+    "current_subtotal_price_set": {
+      "shop_money": {
+        "amount": "6490.00",
+        "currency_code": "USD"
+      },
+      "presentment_money": {
+        "amount": "6490.00",
+        "currency_code": "USD"
+      }
+    },
+    "current_total_discounts": "0.00",
+    "current_total_discounts_set": {
+      "shop_money": {
+        "amount": "0.00",
+        "currency_code": "USD"
+      },
+      "presentment_money": {
+        "amount": "0.00",
+        "currency_code": "USD"
+      }
+    },
+    "current_total_duties_set": null,
+    "current_total_price": "7065.99",
+    "current_total_price_set": {
+      "shop_money": {
+        "amount": "7065.99",
+        "currency_code": "USD"
+      },
+      "presentment_money": {
+        "amount": "7065.99",
+        "currency_code": "USD"
+      }
+    },
+    "current_total_tax": "575.99",
+    "current_total_tax_set": {
+      "shop_money": {
+        "amount": "575.99",
+        "currency_code": "USD"
+      },
+      "presentment_money": {
+        "amount": "575.99",
+        "currency_code": "USD"
+      }
+    },
+    "customer_locale": "en-US",
+    "device_id": null,
+    "discount_codes": [],
+    "email": "rahuly1903@gmail.com",
+    "estimated_taxes": false,
+    "financial_status": "pending",
+    "fulfillment_status": null,
+    "gateway": "Bank Deposit",
+    "landing_site": "/products/three-stone-hidden-accent-bridge-classic-diamond-engagement-ring?variant=43290055442599&view=final-ring&diamond=555288732",
+    "landing_site_ref": null,
+    "location_id": null,
+    "merchant_of_record_app_id": null,
+    "name": "#WC100231445",
+    "note": "Test1",
+    "note_attributes": [],
+    "number": 445,
+    "order_number": 1445,
+    "order_status_url": "https://mfu-usa.myshopify.com/41164374183/orders/4105d2914cb64269d38120fe4e0964e5/authenticate?key=ac0228febd5ce5eff2c555bad7baac10",
+    "original_total_duties_set": null,
+    "payment_gateway_names": ["Bank Deposit"],
+    "phone": null,
+    "presentment_currency": "USD",
+    "processed_at": "2023-10-25T08:09:20-04:00",
+    "processing_method": "manual",
+    "reference": "645df3ee98f9e25cb2caf107181393dd",
+    "referring_site": "",
+    "source_identifier": "645df3ee98f9e25cb2caf107181393dd",
+    "source_name": "web",
+    "source_url": null,
+    "subtotal_price": "8730.00",
+    "subtotal_price_set": {
+      "shop_money": {
+        "amount": "8730.00",
+        "currency_code": "USD"
+      },
+      "presentment_money": {
+        "amount": "8730.00",
+        "currency_code": "USD"
+      }
+    },
+    "tags": "",
+    "tax_lines": [
+      {
+        "price": "349.20",
+        "rate": 0.04,
+        "title": "New York State Tax",
+        "price_set": {
+          "shop_money": {
+            "amount": "349.20",
+            "currency_code": "USD"
+          },
+          "presentment_money": {
+            "amount": "349.20",
+            "currency_code": "USD"
+          }
+        },
+        "channel_liable": false
+      },
+      {
+        "price": "32.74",
+        "rate": 0.00375,
+        "title": "New York County Tax",
+        "price_set": {
+          "shop_money": {
+            "amount": "32.74",
+            "currency_code": "USD"
+          },
+          "presentment_money": {
+            "amount": "32.74",
+            "currency_code": "USD"
+          }
+        },
+        "channel_liable": false
+      },
+      {
+        "price": "392.85",
+        "rate": 0.045,
+        "title": "Manhattan City Tax",
+        "price_set": {
+          "shop_money": {
+            "amount": "392.85",
+            "currency_code": "USD"
+          },
+          "presentment_money": {
+            "amount": "392.85",
+            "currency_code": "USD"
+          }
+        },
+        "channel_liable": false
+      }
+    ],
+    "taxes_included": false,
+    "test": false,
+    "token": "4105d2914cb64269d38120fe4e0964e5",
+    "total_discounts": "0.00",
+    "total_discounts_set": {
+      "shop_money": {
+        "amount": "0.00",
+        "currency_code": "USD"
+      },
+      "presentment_money": {
+        "amount": "0.00",
+        "currency_code": "USD"
+      }
+    },
+    "total_line_items_price": "8730.00",
+    "total_line_items_price_set": {
+      "shop_money": {
+        "amount": "8730.00",
+        "currency_code": "USD"
+      },
+      "presentment_money": {
+        "amount": "8730.00",
+        "currency_code": "USD"
+      }
+    },
+    "total_outstanding": "7065.99",
+    "total_price": "9504.79",
+    "total_price_set": {
+      "shop_money": {
+        "amount": "9504.79",
+        "currency_code": "USD"
+      },
+      "presentment_money": {
+        "amount": "9504.79",
+        "currency_code": "USD"
+      }
+    },
+    "total_shipping_price_set": {
+      "shop_money": {
+        "amount": "0.00",
+        "currency_code": "USD"
+      },
+      "presentment_money": {
+        "amount": "0.00",
+        "currency_code": "USD"
+      }
+    },
+    "total_tax": "774.79",
+    "total_tax_set": {
+      "shop_money": {
+        "amount": "774.79",
+        "currency_code": "USD"
+      },
+      "presentment_money": {
+        "amount": "774.79",
+        "currency_code": "USD"
+      }
+    },
+    "total_tip_received": "0.00",
+    "total_weight": 3,
+    "updated_at": "2023-10-25T08:17:55-04:00",
+    "user_id": null,
+    "billing_address": {
+      "first_name": "Rahul",
+      "address1": "New York",
+      "phone": "+91 88985 43875",
+      "city": "New York",
+      "zip": "10001",
+      "province": "New York",
+      "country": "United States",
+      "last_name": "Yadav",
+      "address2": null,
+      "company": null,
+      "latitude": null,
+      "longitude": null,
+      "name": "Rahul Yadav",
+      "country_code": "US",
+      "province_code": "NY"
+    },
+    "customer": {
+      "id": 3929869287591,
+      "email": "rahuly1903@gmail.com",
+      "accepts_marketing": true,
+      "created_at": "2020-08-11T17:27:37-04:00",
+      "updated_at": "2023-10-25T08:17:58-04:00",
+      "first_name": "Vaibhav",
+      "last_name": "Parab",
+      "state": "disabled",
+      "note": null,
+      "verified_email": true,
+      "multipass_identifier": null,
+      "tax_exempt": false,
+      "phone": null,
+      "email_marketing_consent": {
+        "state": "subscribed",
+        "opt_in_level": "single_opt_in",
+        "consent_updated_at": "2022-01-03T17:51:34-05:00"
+      },
+      "sms_marketing_consent": null,
+      "tags": "newsletter, Subscription popup",
+      "currency": "USD",
+      "accepts_marketing_updated_at": "2022-01-03T17:51:34-05:00",
+      "marketing_opt_in_level": "single_opt_in",
+      "tax_exemptions": [],
+      "admin_graphql_api_id": "gid://shopify/Customer/3929869287591",
+      "default_address": {
+        "id": 7900787605671,
+        "customer_id": 3929869287591,
+        "first_name": "Rahul",
+        "last_name": "Yadav",
+        "company": null,
+        "address1": "New York",
+        "address2": null,
+        "city": "New York",
+        "province": "New York",
+        "country": "United States",
+        "zip": "10001",
+        "phone": "+91 88985 43875",
+        "name": "Rahul Yadav",
+        "province_code": "NY",
+        "country_code": "US",
+        "country_name": "United States",
+        "default": true
+      }
+    },
+    "discount_applications": [],
+    "fulfillments": [],
+    "line_items": [
+      {
+        "id": 12381378773159,
+        "admin_graphql_api_id": "gid://shopify/LineItem/12381378773159",
+        "fulfillable_quantity": 2,
+        "fulfillment_service": "manual",
+        "fulfillment_status": null,
+        "gift_card": false,
+        "grams": 1,
+        "name": "Something Blue Bluebell Floral Engagement Ring - 14KT White Gold / Round / 1 1/8",
+        "price": "2240.00",
+        "price_set": {
+          "shop_money": {
+            "amount": "2240.00",
+            "currency_code": "USD"
+          },
+          "presentment_money": {
+            "amount": "2240.00",
+            "currency_code": "USD"
+          }
+        },
+        "product_exists": true,
+        "product_id": 7660180799655,
+        "properties": [
+          {
+            "name": "Size",
+            "value": "5.25"
+          },
+          {
+            "name": "Ship by",
+            "value": "Monday, November 6"
+          },
+          {
+            "name": "_Ship In",
+            "value": "8"
+          }
+        ],
+        "quantity": 3,
+        "requires_shipping": true,
+        "sku": "1500966RDL/14W/1CT",
+        "taxable": true,
+        "title": "Something Blue Bluebell Floral Engagement Ring",
+        "total_discount": "0.00",
+        "total_discount_set": {
+          "shop_money": {
+            "amount": "0.00",
+            "currency_code": "USD"
+          },
+          "presentment_money": {
+            "amount": "0.00",
+            "currency_code": "USD"
+          }
+        },
+        "variant_id": 43334157435047,
+        "variant_inventory_management": "shopify",
+        "variant_title": "14KT White Gold / Round / 1 1/8",
+        "vendor": "With Clarity",
+        "tax_lines": [
+          {
+            "channel_liable": false,
+            "price": "89.60",
+            "price_set": {
+              "shop_money": {
+                "amount": "89.60",
+                "currency_code": "USD"
+              },
+              "presentment_money": {
+                "amount": "89.60",
+                "currency_code": "USD"
+              }
+            },
+            "rate": 0.04,
+            "title": "New York State Tax"
+          },
+          {
+            "channel_liable": false,
+            "price": "8.40",
+            "price_set": {
+              "shop_money": {
+                "amount": "8.40",
+                "currency_code": "USD"
+              },
+              "presentment_money": {
+                "amount": "8.40",
+                "currency_code": "USD"
+              }
+            },
+            "rate": 0.00375,
+            "title": "New York County Tax"
+          },
+          {
+            "channel_liable": false,
+            "price": "100.80",
+            "price_set": {
+              "shop_money": {
+                "amount": "100.80",
+                "currency_code": "USD"
+              },
+              "presentment_money": {
+                "amount": "100.80",
+                "currency_code": "USD"
+              }
+            },
+            "rate": 0.045,
+            "title": "Manhattan City Tax"
+          },
+          {
+            "channel_liable": false,
+            "price": "89.60",
+            "price_set": {
+              "shop_money": {
+                "amount": "89.60",
+                "currency_code": "USD"
+              },
+              "presentment_money": {
+                "amount": "89.60",
+                "currency_code": "USD"
+              }
+            },
+            "rate": 0.04,
+            "title": "New York State Tax"
+          },
+          {
+            "channel_liable": false,
+            "price": "8.40",
+            "price_set": {
+              "shop_money": {
+                "amount": "8.40",
+                "currency_code": "USD"
+              },
+              "presentment_money": {
+                "amount": "8.40",
+                "currency_code": "USD"
+              }
+            },
+            "rate": 0.00375,
+            "title": "New York County Tax"
+          },
+          {
+            "channel_liable": false,
+            "price": "100.80",
+            "price_set": {
+              "shop_money": {
+                "amount": "100.80",
+                "currency_code": "USD"
+              },
+              "presentment_money": {
+                "amount": "100.80",
+                "currency_code": "USD"
+              }
+            },
+            "rate": 0.045,
+            "title": "Manhattan City Tax"
+          },
+          {
+            "channel_liable": false,
+            "price": "89.60",
+            "price_set": {
+              "shop_money": {
+                "amount": "89.60",
+                "currency_code": "USD"
+              },
+              "presentment_money": {
+                "amount": "89.60",
+                "currency_code": "USD"
+              }
+            },
+            "rate": 0.04,
+            "title": "New York State Tax"
+          },
+          {
+            "channel_liable": false,
+            "price": "8.40",
+            "price_set": {
+              "shop_money": {
+                "amount": "8.40",
+                "currency_code": "USD"
+              },
+              "presentment_money": {
+                "amount": "8.40",
+                "currency_code": "USD"
+              }
+            },
+            "rate": 0.00375,
+            "title": "New York County Tax"
+          },
+          {
+            "channel_liable": false,
+            "price": "100.80",
+            "price_set": {
+              "shop_money": {
+                "amount": "100.80",
+                "currency_code": "USD"
+              },
+              "presentment_money": {
+                "amount": "100.80",
+                "currency_code": "USD"
+              }
+            },
+            "rate": 0.045,
+            "title": "Manhattan City Tax"
+          }
+        ],
+        "duties": [],
+        "discount_allocations": []
+      },
+      {
+        "id": 12381378805927,
+        "admin_graphql_api_id": "gid://shopify/LineItem/12381378805927",
+        "fulfillable_quantity": 1,
+        "fulfillment_service": "manual",
+        "fulfillment_status": null,
+        "gift_card": false,
+        "grams": 1,
+        "name": "Something Blue Bluebell Floral Engagement Ring - 14KT White Gold / Oval / 1 1/8",
+        "price": "2010.00",
+        "price_set": {
+          "shop_money": {
+            "amount": "2010.00",
+            "currency_code": "USD"
+          },
+          "presentment_money": {
+            "amount": "2010.00",
+            "currency_code": "USD"
+          }
+        },
+        "product_exists": true,
+        "product_id": 7660180799655,
+        "properties": [
+          {
+            "name": "Size",
+            "value": "6.25"
+          },
+          {
+            "name": "Ship by",
+            "value": "Monday, November 6"
+          },
+          {
+            "name": "_Ship In",
+            "value": "8"
+          }
+        ],
+        "quantity": 1,
+        "requires_shipping": true,
+        "sku": "1500966OVL/14W/1CT",
+        "taxable": true,
+        "title": "Something Blue Bluebell Floral Engagement Ring",
+        "total_discount": "0.00",
+        "total_discount_set": {
+          "shop_money": {
+            "amount": "0.00",
+            "currency_code": "USD"
+          },
+          "presentment_money": {
+            "amount": "0.00",
+            "currency_code": "USD"
+          }
+        },
+        "variant_id": 43334157500583,
+        "variant_inventory_management": "shopify",
+        "variant_title": "14KT White Gold / Oval / 1 1/8",
+        "vendor": "With Clarity",
+        "tax_lines": [
+          {
+            "channel_liable": false,
+            "price": "80.40",
+            "price_set": {
+              "shop_money": {
+                "amount": "80.40",
+                "currency_code": "USD"
+              },
+              "presentment_money": {
+                "amount": "80.40",
+                "currency_code": "USD"
+              }
+            },
+            "rate": 0.04,
+            "title": "New York State Tax"
+          },
+          {
+            "channel_liable": false,
+            "price": "7.54",
+            "price_set": {
+              "shop_money": {
+                "amount": "7.54",
+                "currency_code": "USD"
+              },
+              "presentment_money": {
+                "amount": "7.54",
+                "currency_code": "USD"
+              }
+            },
+            "rate": 0.00375,
+            "title": "New York County Tax"
+          },
+          {
+            "channel_liable": false,
+            "price": "90.45",
+            "price_set": {
+              "shop_money": {
+                "amount": "90.45",
+                "currency_code": "USD"
+              },
+              "presentment_money": {
+                "amount": "90.45",
+                "currency_code": "USD"
+              }
+            },
+            "rate": 0.045,
+            "title": "Manhattan City Tax"
+          }
+        ],
+        "duties": [],
+        "discount_allocations": []
+      }
+    ],
+    "payment_terms": null,
+    "refunds": [
+      {
+        "id": 859999436967,
+        "admin_graphql_api_id": "gid://shopify/Refund/859999436967",
+        "created_at": "2023-10-25T08:13:53-04:00",
+        "note": null,
+        "order_id": 5205072248999,
+        "processed_at": "2023-10-25T08:13:53-04:00",
+        "restock": true,
+        "total_duties_set": {
+          "shop_money": {
+            "amount": "0.00",
+            "currency_code": "USD"
+          },
+          "presentment_money": {
+            "amount": "0.00",
+            "currency_code": "USD"
+          }
+        },
+        "user_id": 59661844647,
+        "order_adjustments": [],
+        "transactions": [],
+        "refund_line_items": [
+          {
+            "id": 363330142375,
+            "line_item_id": 12381378773159,
+            "location_id": 51569557671,
+            "quantity": 1,
+            "restock_type": "cancel",
+            "subtotal": 2240.0,
+            "subtotal_set": {
+              "shop_money": {
+                "amount": "2240.00",
+                "currency_code": "USD"
+              },
+              "presentment_money": {
+                "amount": "2240.00",
+                "currency_code": "USD"
+              }
+            },
+            "total_tax": 198.8,
+            "total_tax_set": {
+              "shop_money": {
+                "amount": "198.80",
+                "currency_code": "USD"
+              },
+              "presentment_money": {
+                "amount": "198.80",
+                "currency_code": "USD"
+              }
+            },
+            "line_item": {
+              "id": 12381378773159,
+              "admin_graphql_api_id": "gid://shopify/LineItem/12381378773159",
+              "fulfillable_quantity": 2,
+              "fulfillment_service": "manual",
+              "fulfillment_status": null,
+              "gift_card": false,
+              "grams": 1,
+              "name": "Something Blue Bluebell Floral Engagement Ring - 14KT White Gold / Round / 1 1/8",
+              "price": "2240.00",
+              "price_set": {
+                "shop_money": {
+                  "amount": "2240.00",
+                  "currency_code": "USD"
+                },
+                "presentment_money": {
+                  "amount": "2240.00",
+                  "currency_code": "USD"
+                }
+              },
+              "product_exists": true,
+              "product_id": 7660180799655,
+              "properties": [
+                {
+                  "name": "Size",
+                  "value": "5.25"
+                },
+                {
+                  "name": "Ship by",
+                  "value": "Monday, November 6"
+                },
+                {
+                  "name": "_Ship In",
+                  "value": "8"
+                }
+              ],
+              "quantity": 3,
+              "requires_shipping": true,
+              "sku": "1500966RDL/14W/1CT",
+              "taxable": true,
+              "title": "Something Blue Bluebell Floral Engagement Ring",
+              "total_discount": "0.00",
+              "total_discount_set": {
+                "shop_money": {
+                  "amount": "0.00",
+                  "currency_code": "USD"
+                },
+                "presentment_money": {
+                  "amount": "0.00",
+                  "currency_code": "USD"
+                }
+              },
+              "variant_id": 43334157435047,
+              "variant_inventory_management": "shopify",
+              "variant_title": "14KT White Gold / Round / 1 1/8",
+              "vendor": "With Clarity",
+              "tax_lines": [
+                {
+                  "channel_liable": false,
+                  "price": "89.60",
+                  "price_set": {
+                    "shop_money": {
+                      "amount": "89.60",
+                      "currency_code": "USD"
+                    },
+                    "presentment_money": {
+                      "amount": "89.60",
+                      "currency_code": "USD"
+                    }
+                  },
+                  "rate": 0.04,
+                  "title": "New York State Tax"
+                },
+                {
+                  "channel_liable": false,
+                  "price": "8.40",
+                  "price_set": {
+                    "shop_money": {
+                      "amount": "8.40",
+                      "currency_code": "USD"
+                    },
+                    "presentment_money": {
+                      "amount": "8.40",
+                      "currency_code": "USD"
+                    }
+                  },
+                  "rate": 0.00375,
+                  "title": "New York County Tax"
+                },
+                {
+                  "channel_liable": false,
+                  "price": "100.80",
+                  "price_set": {
+                    "shop_money": {
+                      "amount": "100.80",
+                      "currency_code": "USD"
+                    },
+                    "presentment_money": {
+                      "amount": "100.80",
+                      "currency_code": "USD"
+                    }
+                  },
+                  "rate": 0.045,
+                  "title": "Manhattan City Tax"
+                },
+                {
+                  "channel_liable": false,
+                  "price": "89.60",
+                  "price_set": {
+                    "shop_money": {
+                      "amount": "89.60",
+                      "currency_code": "USD"
+                    },
+                    "presentment_money": {
+                      "amount": "89.60",
+                      "currency_code": "USD"
+                    }
+                  },
+                  "rate": 0.04,
+                  "title": "New York State Tax"
+                },
+                {
+                  "channel_liable": false,
+                  "price": "8.40",
+                  "price_set": {
+                    "shop_money": {
+                      "amount": "8.40",
+                      "currency_code": "USD"
+                    },
+                    "presentment_money": {
+                      "amount": "8.40",
+                      "currency_code": "USD"
+                    }
+                  },
+                  "rate": 0.00375,
+                  "title": "New York County Tax"
+                },
+                {
+                  "channel_liable": false,
+                  "price": "100.80",
+                  "price_set": {
+                    "shop_money": {
+                      "amount": "100.80",
+                      "currency_code": "USD"
+                    },
+                    "presentment_money": {
+                      "amount": "100.80",
+                      "currency_code": "USD"
+                    }
+                  },
+                  "rate": 0.045,
+                  "title": "Manhattan City Tax"
+                },
+                {
+                  "channel_liable": false,
+                  "price": "89.60",
+                  "price_set": {
+                    "shop_money": {
+                      "amount": "89.60",
+                      "currency_code": "USD"
+                    },
+                    "presentment_money": {
+                      "amount": "89.60",
+                      "currency_code": "USD"
+                    }
+                  },
+                  "rate": 0.04,
+                  "title": "New York State Tax"
+                },
+                {
+                  "channel_liable": false,
+                  "price": "8.40",
+                  "price_set": {
+                    "shop_money": {
+                      "amount": "8.40",
+                      "currency_code": "USD"
+                    },
+                    "presentment_money": {
+                      "amount": "8.40",
+                      "currency_code": "USD"
+                    }
+                  },
+                  "rate": 0.00375,
+                  "title": "New York County Tax"
+                },
+                {
+                  "channel_liable": false,
+                  "price": "100.80",
+                  "price_set": {
+                    "shop_money": {
+                      "amount": "100.80",
+                      "currency_code": "USD"
+                    },
+                    "presentment_money": {
+                      "amount": "100.80",
+                      "currency_code": "USD"
+                    }
+                  },
+                  "rate": 0.045,
+                  "title": "Manhattan City Tax"
+                }
+              ],
+              "duties": [],
+              "discount_allocations": []
+            }
+          }
+        ],
+        "duties": []
+      }
+    ],
+    "shipping_address": {
+      "first_name": "Rahul",
+      "address1": "New York",
+      "phone": "+91 88985 43875",
+      "city": "New York",
+      "zip": "10001",
+      "province": "New York",
+      "country": "United States",
+      "last_name": "Yadav",
+      "address2": null,
+      "company": null,
+      "latitude": 40.75368539999999,
+      "longitude": -73.9991637,
+      "name": "Rahul Yadav",
+      "country_code": "US",
+      "province_code": "NY"
+    },
+    "shipping_lines": [
+      {
+        "id": 4143242117287,
+        "carrier_identifier": "650f1a14fa979ec5c74d063e968411d4",
+        "code": "Insured Shipping",
+        "delivery_category": null,
+        "discounted_price": "0.00",
+        "discounted_price_set": {
+          "shop_money": {
+            "amount": "0.00",
+            "currency_code": "USD"
+          },
+          "presentment_money": {
+            "amount": "0.00",
+            "currency_code": "USD"
+          }
+        },
+        "phone": null,
+        "price": "0.00",
+        "price_set": {
+          "shop_money": {
+            "amount": "0.00",
+            "currency_code": "USD"
+          },
+          "presentment_money": {
+            "amount": "0.00",
+            "currency_code": "USD"
+          }
+        },
+        "requested_fulfillment_service_id": null,
+        "source": "shopify",
+        "title": "Insured Shipping",
+        "tax_lines": [
+          {
+            "channel_liable": false,
+            "price": "0.00",
+            "price_set": {
+              "shop_money": {
+                "amount": "0.00",
+                "currency_code": "USD"
+              },
+              "presentment_money": {
+                "amount": "0.00",
+                "currency_code": "USD"
+              }
+            },
+            "rate": 0.04,
+            "title": "New York State Tax"
+          },
+          {
+            "channel_liable": false,
+            "price": "0.00",
+            "price_set": {
+              "shop_money": {
+                "amount": "0.00",
+                "currency_code": "USD"
+              },
+              "presentment_money": {
+                "amount": "0.00",
+                "currency_code": "USD"
+              }
+            },
+            "rate": 0.00375,
+            "title": "New York County Tax"
+          },
+          {
+            "channel_liable": false,
+            "price": "0.00",
+            "price_set": {
+              "shop_money": {
+                "amount": "0.00",
+                "currency_code": "USD"
+              },
+              "presentment_money": {
+                "amount": "0.00",
+                "currency_code": "USD"
+              }
+            },
+            "rate": 0.045,
+            "title": "Manhattan City Tax"
+          }
+        ],
+        "discount_allocations": []
+      }
+    ]
+  }
+}
