@@ -1,5 +1,6 @@
 const axios = require("axios");
 function order_data(data) {
+  console.log("order_data");
   try {
     let config = {
       method: "post",

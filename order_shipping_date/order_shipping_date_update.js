@@ -4,12 +4,12 @@ const order_json = require("../order.json");
 
 async function order_shipping_update(props) {
   try {
-    console.log(props);
+    // console.log(props);
     const order_onwer_id = props?.id || order_json.order.id;
     const item_shipping_date = shipping_caculation(props || order_json.order);
     console.log(
       "item_shipping_date - children",
-      item_shipping_date.children[1]
+      item_shipping_date.children[0]
     );
     console.log("item_shipping_date - parent", item_shipping_date);
     const responce = await shopify.metafield.create({
