@@ -64,11 +64,15 @@ app.get("/api/order-shipping-update", async (req, res) => {
   res.send(responce);
 });
 
-app.get("/api/order-status", async (req, res) => {
+app.post("/api/order-status", async (req, res) => {
   console.log("rahul");
-  const responce = await order_status();
-  res.send(responce);
-  console.log("rahul1");
+  order_status(req, res);
+  // responce.then((data) => {
+  //   console.log(data);
+  // });
+  // console.log(responce);
+  // res.send(responce);
+  // console.log("rahul1");
 });
 
 app.listen(port, () => {

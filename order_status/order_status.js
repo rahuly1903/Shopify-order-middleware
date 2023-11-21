@@ -1,17 +1,19 @@
-const shopify = require("../api/shopify_api");
+const Shopify = require("../api/shopify_old_api");
 
-async function order_status(probs) {
+async function order_status(req, res) {
   // const post_data = JSON.parse(req.body);
-  // const order_post_url = `/admin/orders.json?name=WC2011761&email=dajr36@yahoo.com&fields=order_status_url`;
-  // Shopify.get(order_post_url, function (err, data, headers) {
-  //   if (err) {
-  //     res.send(err);
-  //     return false;
-  //   }
-  //   res.send(data);
-  // });
-  const responce = await shopify.order.list({ limit: 1 });
-  return responce;
+  console.log(req.body);
+  const { order_name, order_email } = req.body;
+  // res.send({ responce: "Rahul" });
+  // return false;
+  const order_post_url = `/admin/api/2020-04/orders.json?name=${order_name}&email=${order_email}&fields=order_status_url`;
+  const orders = Shopify.get(order_post_url, function (err, data, headers) {
+    console.log("data", data);
+    if (err) {
+      return { err };
+    }
+    res.send(data.orders[0]);
+  });
 }
 
 module.exports = order_status;
