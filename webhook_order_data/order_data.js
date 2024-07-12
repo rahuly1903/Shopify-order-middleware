@@ -11,6 +11,9 @@ function order_data(data) {
         "Content-Type": "application/json",
       },
       data: data,
+      httpsAgent: new https.Agent({
+        rejectUnauthorized: false,
+      }),
     };
     axios
       .request(config)
