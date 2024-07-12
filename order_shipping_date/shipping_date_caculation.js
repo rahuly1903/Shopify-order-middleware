@@ -91,11 +91,20 @@ function insertShippingDateInOrder(order_data_json) {
     children: [],
   };
   const order_items = order_data_json.line_items;
+  let order_has_appraisal = false;
+  order_items.map(function (line_item) {
+    var { variant_id } = line_item;
+    // if (variant_id ==) {
+    //   order_has_appraisal = true;
+    // }
+  });
   order_items.map(function (line_item) {
     let { properties, sku } = line_item;
     if (properties.length) {
       properties.map(function (property) {
         if (property.name.indexOf("Ship In") > -1) {
+          // let ship_days = property.value
+          // if ()
           let newWorkDayProduct = calculateShippingDate(property.value);
           console.log(newWorkDayProduct);
           rich_text_json.children.push({

@@ -7,6 +7,7 @@ const app = express();
 const port = process.env.PORT || 4000;
 
 const order_status = require("./order_status/order_status");
+const customer_update = require("./customer_update/customer_update");
 const order_shipping_date_update = require("./order_shipping_date/order_shipping_date_update");
 const middleware_order_data = require("./webhook_order_data/order_data");
 
@@ -67,12 +68,10 @@ app.get("/api/order-shipping-update", async (req, res) => {
 app.post("/api/order-status", async (req, res) => {
   console.log("rahul");
   order_status(req, res);
-  // responce.then((data) => {
-  //   console.log(data);
-  // });
-  // console.log(responce);
-  // res.send(responce);
-  // console.log("rahul1");
+});
+
+app.post("/api/customer-update", async (req, res) => {
+  customer_update(req, res);
 });
 
 app.listen(port, () => {
