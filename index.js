@@ -41,18 +41,18 @@ app.post("/webhooks/order-creation", async (req, res, next) => {
   const data = req.body.toString();
   try {
     const shopifyHmac = req.headers["x-shopify-hmac-sha256"];
-    // if (verifyHmac(req.body, shopifyHmac)) {
-    try {
-      middleware_order_data(data);
-      const responce = await order_shipping_date_update(JSON.parse(data));
-      console.log(responce);
-    } catch (error) {
-      console.log(error);
+    if (verifyHmac(req.body, shopifyHmac)) {
+      try {
+        middleware_order_data(data);
+        const responce = await order_shipping_date_update(JSON.parse(data));
+        console.log(responce);
+      } catch (error) {
+        console.log(error);
+      }
+      res.sendStatus(200);
+    } else {
+      res.sendStatus(403);
     }
-    res.sendStatus(200);
-    // } else {
-    //   res.sendStatus(403);
-    // }
   } catch (error) {
     console.error(error);
     res.sendStatus(500);
