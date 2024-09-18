@@ -14,7 +14,7 @@ const transporter = nodemailer.createTransport({
   secure: true,
 });
 
-function order_data(data) {
+function order_data(res, data) {
   console.log("order_data");
   const { name } = JSON.parse(data);
   console.log(process.env.BASE_URL);
@@ -49,24 +49,18 @@ function order_data(data) {
       .catch((error) => {
         transporter.sendMail(mailData, function (err, info) {
           if (err) {
-            res.send({ msg: `Error in sending Mail - ${err}` });
+            console.log({ msg: `Error in sending Mail - ${err}` });
           } else {
-            res.send({ msg: `mail send successfully` });
+            console.log({ msg: `mail send successfully` });
           }
         });
         if (error.response) {
-          // The request was made, and the server responded with a status code
-          // that falls out of the range of 2xx
           console.log("sendStatus " + error.response.status);
-          // console.log("Error message: " + error.response.data);
         } else if (error.request) {
-          // The request was made but no response was received
           console.log("sendStatus 500");
           console.log("Error message: No response received");
         } else {
-          // Something happened in setting up the request that triggered an Error
           console.log("sendStatus 500");
-          // console.log("Error message: " + error.message);
         }
       });
   } catch (error) {

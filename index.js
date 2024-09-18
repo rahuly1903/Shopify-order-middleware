@@ -39,13 +39,14 @@ function verifyHmac(requestBody, shopifyHmac) {
 
 app.post("/webhooks/order-creation", async (req, res, next) => {
   const data = req.body.toString();
+  // console.log(req.body.toString());
   try {
     const shopifyHmac = req.headers["x-shopify-hmac-sha256"];
     if (verifyHmac(req.body, shopifyHmac)) {
       try {
-        middleware_order_data(data);
+        middleware_order_data(res, data);
         const responce = await order_shipping_date_update(JSON.parse(data));
-        console.log(responce);
+        console.log("order_shipping_date_update", responce);
       } catch (error) {
         console.log(error);
       }
